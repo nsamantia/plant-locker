@@ -1,0 +1,1 @@
+SELECT * FROM users_pl WHERE username ilike $1;
