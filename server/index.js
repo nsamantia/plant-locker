@@ -5,6 +5,7 @@ const massive = require('massive')
 const app = express()
 
 const authCtrl = require('./authController')
+const fldrCtrl = require('./folderController')
 
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -26,6 +27,12 @@ app.use(
     app.post(`/api/auth/login`, authCtrl.login)
     app.get('/api/auth/logout', authCtrl.logout)
     app.get('/api/auth/getUser'), authCtrl.getUser
+
+    //folder endpoints
+    app.get(`/api/folder/:search`, fldrCtrl.getFolders)
+    app.post(`/api/folder/new`, fldrCtrl.newFolder)
+
+    //plant endpoints
 
 
 
