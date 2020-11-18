@@ -28,14 +28,14 @@ export function getUser() {
 
     return {
         type: GET_USER,
-        payload: paload
+        payload: payload
     }
 }
 
 export default function reducer (state = initialState, action){
     switch(action.type){
         case LOGIN_USER:
-            return {...state, user: action.paload, isLoggedin: true}
+            return {...state, user: action.payload, isLoggedin: true}
         case LOGOUT_USER:
             return initialState
         case GET_USER + '_PENDING':
