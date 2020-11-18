@@ -19,10 +19,10 @@ module.exports = {
 
     newFolder: async (req, res) => {
         const db = req.app.get('db')
-        const {userid} = req.session.user
+        const {id} = req.session.user
         const {category} = req.body
 
-        const newFolder = await db.new_folder(userid, category)
+        const newFolder = await db.new_folder(id, category)
         res.status(200).send(newFolder)
     }
 }

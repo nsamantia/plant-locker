@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Blocks from '../Blocks/Blocks'
+import {Link} from 'react-router-dom'
 
 const Landing = (props) => {
 
@@ -20,7 +21,12 @@ const Landing = (props) => {
 
     return(
         <div>
-            Landing.js
+            
+            <input type="text" name="search" onChange={(e)=> setSearch(e.target.value)}/>
+            <button onClick={() => getFolders()}>Search</button>
+            <Link to="/NewFolder"><button>New Folder</button></Link>
+
+            
 
 
 
