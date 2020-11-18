@@ -3,15 +3,15 @@ module.exports = {
     getFolders: async (req, res) => {
         const db = req.app.get('db')
         const {search} = req.query
-        const {userid} = req.session.user
+        const {id} = req.session.user
         // id = userid
 
 
         if (search){
-            const searchFolders = await db.get_searched_folders(userid, seach)
+            const searchFolders = await db.get_searched_folders(id, search)
             return res.status(200).send(searchFolders)
         } else {
-            const getFolders = await db.get_folders(userid)
+            const getFolders = await db.get_folders(id)
             return res.status(200).send(getFolders)
         }
 

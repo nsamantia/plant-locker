@@ -29,7 +29,7 @@ app.use(
     app.get('/api/auth/getUser'), authCtrl.getUser
 
     //folder endpoints
-    app.get(`/api/folder/:search`, fldrCtrl.getFolders)
+    app.get(`/api/folder`, fldrCtrl.getFolders)
     app.post(`/api/folder/new`, fldrCtrl.newFolder)
 
     //plant endpoints

@@ -13,7 +13,7 @@ const Login = (props) => {
         axios.post(`/api/auth/login`, {username, password})
         .then(res => {
             props.loginUser(res.data)
-            props.history.push('/landing')
+            props.history.push('/Landing')
         }).catch(err => console.log(err.message))
 
     }
