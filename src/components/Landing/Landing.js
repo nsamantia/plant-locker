@@ -11,7 +11,7 @@ const Landing = (props) => {
 
     useEffect(() => {
         getFolders()
-    }, [])
+    }, [folders])
 
 
     const getFolders = () => {
