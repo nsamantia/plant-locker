@@ -19,9 +19,7 @@ const NewFolder = () => {
                 <p>New Folder</p>
             </div>
             <input type="text" name="category" onChange={(e)=>setCategory(e.target.value)}/>
-            <Link to="/Landing">
-                <button onClick={() => newFolder()}>Upload New Folder</button>
-            </Link>
+            <Link to="/Landing"><button onClick={() => newFolder()}>Upload New Folder</button></Link>
 
         </div>
     )

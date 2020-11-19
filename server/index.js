@@ -31,6 +31,7 @@ app.use(
     //folder endpoints
     app.get(`/api/folder`, fldrCtrl.getFolders)
     app.post(`/api/folder/new`, fldrCtrl.newFolder)
+    app.delete('/api/folder/delete/:category_id', fldrCtrl.deleteFolder)
 
     //plant endpoints
 
