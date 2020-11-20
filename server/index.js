@@ -26,7 +26,7 @@ app.use(
     app.post(`/api/auth/register`, authCtrl.register)
     app.post(`/api/auth/login`, authCtrl.login)
     app.get('/api/auth/logout', authCtrl.logout)
-    app.get('/api/auth/getUser'), authCtrl.getUser
+    app.get('/api/auth/getUser', authCtrl.getUser)
 
     //folder endpoints
     app.get(`/api/folder`, fldrCtrl.getFolders)
