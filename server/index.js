@@ -6,6 +6,7 @@ const app = express()
 
 const authCtrl = require('./authController')
 const fldrCtrl = require('./folderController')
+const scndCtrl = require('./secondController')
 
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -32,6 +33,11 @@ app.use(
     app.get(`/api/folder`, fldrCtrl.getFolders)
     app.post(`/api/folder/new`, fldrCtrl.newFolder)
     app.delete('/api/folder/delete/:category_id', fldrCtrl.deleteFolder)
+
+    //second level folder endpoints
+    app.get(`/api/folder/second`, scndCtrl.getFolders)
+    app.post(`/api/folder/second/new`, scndCtrl.newFolder)
+    app.delete(`/api/folder/second/delete/:category_id`, scndCtrl.deleteFolder)
 
     //plant endpoints
 
