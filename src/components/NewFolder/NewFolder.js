@@ -10,7 +10,7 @@ const NewFolder = () => {
     const newFolder = () => {
         axios.post('/api/folder/new', {category})
     }
-
+    
 
 
     return(

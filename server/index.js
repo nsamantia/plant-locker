@@ -7,6 +7,7 @@ const app = express()
 const authCtrl = require('./authController')
 const fldrCtrl = require('./folderController')
 const scndCtrl = require('./secondController')
+const plntCtrl = require('./plantController')
 
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -40,7 +41,9 @@ app.use(
     app.delete(`/api/folder/second/delete/:category_id`, scndCtrl.deleteFolder)
 
     //plant endpoints
-
+    app.get('/api/plants', plntCtrl.getPlants)
+    app.post(`/api/plants/new`, plntCtrl.newPlant)
+    app.delete(`/api/plants/delete`, plntCtrl.deletePlant)
 
 
 
