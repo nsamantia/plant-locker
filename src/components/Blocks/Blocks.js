@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
 
 const Blocks = (props) => {
@@ -20,7 +21,7 @@ const Blocks = (props) => {
 
     return(
         <div>
-            <button>
+            <button onClick={()=> props.history.push(`/InFolder/${props.category_id}`)}>
                 <p>{props.category}</p>
 
             </button>
@@ -31,4 +32,4 @@ const Blocks = (props) => {
 
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps)(Blocks)
+export default connect(mapStateToProps)(withRouter(Blocks))

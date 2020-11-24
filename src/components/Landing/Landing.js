@@ -39,7 +39,6 @@ const Landing = (props) => {
                 category_id={e.category_id}
                 setFolders={setFolders}
                 
-
                     
                 />
             )
