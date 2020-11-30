@@ -5,21 +5,28 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 
+
 const InFolder = () =>{
 
     const [folders, setFolders] = useState([])
     const [plants, setPlants] = useState([])
-    const [serch, setSearch] = useState([])
+    const [search, setSearch] = useState([])
+
+    useEffect(() => {
+        getFolders()
+        getPlants()
+    }, [folders, plants])
 
     const getFolders = () => {
 
             axios.get('/api/folder/second')
-            .then(res => {setFolders(res.data)})
+            .then(res => setFolders(res.data))
 
     }
 
     const getPlants = () => {
-
+        axios.get('/api/plants')
+        .then(res => setPlants(res.data))
     }
 
 
@@ -34,5 +41,6 @@ const InFolder = () =>{
 
     )
 }
+const mapStateToProps = reduxState => reduxState
 
-export default InFolder
+export default connect(mapStateToProps)(InFolder)
