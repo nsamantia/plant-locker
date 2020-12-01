@@ -13,9 +13,6 @@ const FoldersMap = (props) => {
     const deleteFolder = () => {
         axios.delete(`/api/folder/delete/${props.category_id}`)
         .then(res => props.setFolders(res.data))
-
-        
-        
     }
     
 

@@ -56,7 +56,12 @@ const InFolder = () =>{
             <div>
                 {plants.map(e => {
                     return(
-                        <PlantsMap />
+                        <PlantsMap 
+                        plants = {e}
+                        plant_name={e.plant}
+                        plant_id={e.id}
+                        setPlants={setPlants}
+                        />
                         
                     )
                 })}
