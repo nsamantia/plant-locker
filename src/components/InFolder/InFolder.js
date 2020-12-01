@@ -12,16 +12,21 @@ const InFolder = () =>{
 
     const [folders, setFolders] = useState([])
     const [plants, setPlants] = useState([])
-    const [search, setSearch] = useState([])
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         getFolders()
+        
+    }, [folders])
+
+    useEffect(() => {
         getPlants()
-    }, [folders, plants])
+
+    }, [plants])
 
     const getFolders = () => {
 
-            axios.get('/api/folder/second')
+            axios.get(`/api/folder/second/?search=${search}`)
             .then(res => setFolders(res.data))
 
     }
