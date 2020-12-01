@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 
-const Blocks = (props) => {
+const FoldersMap = (props) => {
 
     
     // console.log(props.category_id)
@@ -32,4 +32,4 @@ const Blocks = (props) => {
 
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps)(withRouter(Blocks))
+export default connect(mapStateToProps)(withRouter(FoldersMap))

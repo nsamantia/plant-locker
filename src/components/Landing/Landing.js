@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import Blocks from '../Blocks/Blocks'
+import FoldersMap from '../FoldersMap/FoldersMap'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
@@ -33,7 +33,7 @@ const Landing = (props) => {
 
         {folders.map(e => {
             return(
-                <Blocks 
+                <FoldersMap 
                 folder = {e}
                 category={e.category}
                 category_id={e.category_id}

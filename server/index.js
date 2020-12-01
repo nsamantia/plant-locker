@@ -43,7 +43,7 @@ app.use(
     //plant endpoints
     app.get('/api/plants', plntCtrl.getPlants)
     app.post(`/api/plants/new`, plntCtrl.newPlant)
-    app.delete(`/api/plants/delete`, plntCtrl.deletePlant)
+    app.delete(`/api/plants/delete/:id`, plntCtrl.deletePlant)
 
 
 

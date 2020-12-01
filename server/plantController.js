@@ -20,6 +20,13 @@ module.exports = {
     },
 
     deletePlant: async (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.params
 
+        const deletePlant = await db.delete_plant(id)
+        res.status(200).send(deletePlant)
     }
 }
+
+        
+

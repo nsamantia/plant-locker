@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import Blocks from '../Blocks/Blocks'
+import FoldersMap from '../FoldersMap/FoldersMap'
+import PlantsMap from '../PlantsMap/PlantsMap'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+
 
 
 
@@ -36,6 +38,29 @@ const InFolder = () =>{
             <input type="text" name="search" onChange={(e)=> setSearch(e.target.value)}/>
             <button onClick={() => getFolders()}>Search</button>
             <Link to="/NewFolder"><button>New Folder</button></Link>
+
+
+            <div>
+                {folders.map(e => {
+                    return(
+                        <FoldersMap
+                        folder = {e}
+                        category={e.category}
+                        category_id={e.category_id}
+                        setFolders={setFolders}
+                        />
+                    )
+                })}
+            </div>
+
+            <div>
+                {plants.map(e => {
+                    return(
+                        <PlantsMap />
+                        
+                    )
+                })}
+            </div>
 
         </div>
 
