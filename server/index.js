@@ -36,8 +36,8 @@ app.use(
     app.delete('/api/folder/delete/:category_id', fldrCtrl.deleteFolder)
 
     //second level folder endpoints
-    app.get(`/api/folder/second`, scndCtrl.getFolders)
-    app.post(`/api/folder/second/new`, scndCtrl.newFolder)
+    app.get(`/api/folder/second/:category_one_id`, scndCtrl.getFolders)
+    app.post(`/api/folder/second/new/:category_one_id`, scndCtrl.newFolder)
     app.delete(`/api/folder/second/delete/:category_id`, scndCtrl.deleteFolder)
 
     //plant endpoints

@@ -4,14 +4,14 @@ module.exports = {
         const db = req.app.get('db')
         const {search} = req.query
         const {id} = req.session.user
-        const {category_id} = req.params
+        const {category_one_id} = req.params
         
 
         if (search){
-            const searchFolders = await db.second_get_searched_folders(id, search, category_id)
+            const searchFolders = await db.second_get_searched_folders(id, search, category_one_id)
             return res.status(200).send(searchFolders)
         } else {
-            const getFolders = await db.second_get_folders(id, category_id)
+            const getFolders = await db.second_get_folders(id, category_one_id)
             return res.status(200).send(getFolders)
         }
 
