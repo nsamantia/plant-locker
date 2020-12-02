@@ -3,7 +3,7 @@ module.exports = {
     getPlants: async (req, res) => {
         const db = req.app.get('db')
         const {id} = req.session.user
-        const {plant_category_id } = req.body
+        const {plant_category_id } = req.params
 
         const getPlants = await db.get_plants(id, plant_category_id)
         res.status(200).send(getPlants)
@@ -13,7 +13,8 @@ module.exports = {
     newPlant: async (req, res) => {
         const db = req.app.get('db')
         const {id} = req.session.user
-        const {plant, plant_category_id} = req.body
+        const {plant} = req.body
+        const {plant_category_id} = req.params
 
         const newPlant = await db.new_plant(id, plant, plant_category_id)
         res.status(200).send(newPlant)

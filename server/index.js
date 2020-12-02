@@ -41,8 +41,8 @@ app.use(
     app.delete(`/api/folder/second/delete/:category_id`, scndCtrl.deleteFolder)
 
     //plant endpoints
-    app.get('/api/plants', plntCtrl.getPlants)
-    app.post(`/api/plants/new`, plntCtrl.newPlant)
+    app.get('/api/plants/:plant_category_id', plntCtrl.getPlants)
+    app.post(`/api/plants/new/:plant_category_id`, plntCtrl.newPlant)
     app.delete(`/api/plants/delete/:id`, plntCtrl.deletePlant)
 
 
