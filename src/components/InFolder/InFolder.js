@@ -8,7 +8,7 @@ import {connect} from 'react-redux'
 
 
 
-const InFolder = () =>{
+const InFolder = (props) =>{
 
     const [folders, setFolders] = useState([])
     const [plants, setPlants] = useState([])
@@ -26,13 +26,13 @@ const InFolder = () =>{
 
     const getFolders = () => {
 
-            axios.get(`/api/folder/second/?search=${search}`)
+            axios.get(`/api/folder/second/${props.match.params.category_id}/?search=${search}`)
             .then(res => setFolders(res.data))
 
     }
 
     const getPlants = () => {
-        axios.get('/api/plants')
+        axios.get(`/api/plants/${props.match.params.category_id}`)
         .then(res => setPlants(res.data))
     }
 
