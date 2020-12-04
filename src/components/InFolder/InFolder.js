@@ -42,7 +42,7 @@ const InFolder = (props) =>{
         <div>
             <input type="text" name="search" onChange={(e)=> setSearch(e.target.value)}/>
             <button onClick={() => getFolders()}>Search</button>
-            <Link to="/NewFolder"><button>New Folder</button></Link>
+            <Link to="/SecondNewFolder"><button>New Folder</button></Link>
 
 
             <div>

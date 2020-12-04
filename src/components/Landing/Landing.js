@@ -8,6 +8,7 @@ const Landing = (props) => {
 
     const [folders, setFolders] = useState([])
     const [search, setSearch] = useState('')
+    
 
     useEffect(() => {
         getFolders()
