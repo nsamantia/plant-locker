@@ -32,5 +32,13 @@ module.exports = {
 
         const deleteFolder = await db.delete_folder(category_id)
         res.status(200).send(deleteFolder)
+    },
+    
+    getFirstFolder: async(req, res) => {
+        const db = req.app.get('db')
+        const {category_id} = req.params
+
+        const getFirstFolder = await db.get_first_folder(category_id)
+        res.status(200).send(getFirstFolder)
     }
 }

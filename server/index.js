@@ -34,6 +34,7 @@ app.use(
     app.get(`/api/folder`, fldrCtrl.getFolders)
     app.post(`/api/folder/new`, fldrCtrl.newFolder)
     app.delete('/api/folder/delete/:category_id', fldrCtrl.deleteFolder)
+    app.get(`/api/folder/get/:category_id`, fldrCtrl.getFirstFolder)
 
     //second level folder endpoints
     app.get(`/api/folder/second/:category_one_id`, scndCtrl.getFolders)
