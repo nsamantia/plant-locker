@@ -9,6 +9,7 @@ const GET_FOLDER = 'GET_FOLDER'
 
 export function getFolder(category_id) {
     const payload = axios.get(`/api/folder/get/${category_id}`)
+    
 
     return {
         type: GET_FOLDER,

@@ -13,6 +13,8 @@ const FoldersMap = (props) => {
     const getFolderOne = () => {
         props.history.push(`/InFolder/${props.category_id}`)
         props.getFolder(props.category_id)
+
+        
     }
 
 
