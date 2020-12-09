@@ -12,7 +12,7 @@ const FoldersMap = (props) => {
 
     const getFolderOne = () => {
         props.history.push(`/InFolder/${props.category_id}`)
-        getFolder()
+        props.getFolder(props.category_id)
     }
 
 
@@ -35,4 +35,4 @@ const FoldersMap = (props) => {
 
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps, {getFolder})(withRouter(FoldersMap))
+export default connect(mapStateToProps)(withRouter(FoldersMap))
