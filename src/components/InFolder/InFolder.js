@@ -20,7 +20,7 @@ const InFolder = (props) =>{
     }, [folders])
 
     useEffect(() => {
-        getPlants()
+        getPlants(props.match.params.category_id)
 
     }, [plants])
 
