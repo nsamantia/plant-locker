@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import FoldersMap from '../FoldersMap/FoldersMap'
 import {Link} from 'react-router-dom'
+import {getFolder} from '../../ducks/folderReducer'
 import {connect} from 'react-redux'
 
 const Landing = (props) => {
@@ -54,4 +55,4 @@ const Landing = (props) => {
 
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps)(Landing)
+export default connect(mapStateToProps, {getFolder})(Landing)

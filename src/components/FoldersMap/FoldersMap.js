@@ -2,12 +2,18 @@ import React from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import {getFolder} from '../../ducks/folderReducer'
 
 
 const FoldersMap = (props) => {
 
     
     // console.log(props.category_id)
+
+    const getFolderOne = () => {
+        props.history.push(`/InFolder/${props.category_id}`)
+        getFolder()
+    }
 
 
     const deleteFolder = () => {
@@ -18,7 +24,7 @@ const FoldersMap = (props) => {
 
     return(
         <div>
-            <button onClick={()=> props.history.push(`/InFolder/${props.category_id}`)}>
+            <button onClick={()=> getFolderOne() }>
                 <p>{props.category}</p>
 
             </button>
@@ -29,4 +35,4 @@ const FoldersMap = (props) => {
 
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps)(withRouter(FoldersMap))
+export default connect(mapStateToProps, {getFolder})(withRouter(FoldersMap))
