@@ -1,2 +1,33 @@
 @import 'config';
 
+.login-button{
+    @include loginButton;
+    margin-top: 20px;
+}
+
+.login-container{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    
+}
+
+.login-form-container{
+    @include flexCenter;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    
+}
+
+
+.input-container{
+    
+
+    input{
+        @include inputBox;
+        
+    }
+}

@@ -1,5 +1,31 @@
 //variables
+$primary-color: #588157;
 
+//mixins
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin loginButton{
+    background-color: $primary-color;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 14px;
+    
+
+}
+
+@mixin inputBox{
+    border: none;
+    border-bottom: 1px solid #DAD7CD;
+    background-color: none;
+    width: 250px;
+    height: 30px;
+}
 
 //resets
 *{

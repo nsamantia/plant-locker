@@ -21,10 +21,21 @@ const Login = (props) => {
     }
 
     return(
-        <div>
-            <input type="text" name="username" placeholder="password" onChange={(e)=>setUsername(e.target.value)}/>
-            <input type="text" name="password" placeholder="username" onChange={(e)=>setPassword(e.target.value)}/>
-            <button onClick ={()=>login()}>Login</button>
+        <div className="login-container">
+
+            <div className="login-form-container">
+                <div className="input-container">
+                    <div>
+                        <input type="text" name="username" placeholder="password" onChange={(e)=>setUsername(e.target.value)}/>
+                    </div>
+                    <div>
+                        <input type="text" name="password" placeholder="username" onChange={(e)=>setPassword(e.target.value)}/>
+                    </div>
+                </div>
+                <div className="login-btn-container">
+                    <button className="login-button" onClick ={()=>login()}>Sign in</button>
+                </div>
+            </div>
 
         </div>
     )
