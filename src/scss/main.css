@@ -37,6 +37,7 @@
 .image-container {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.2))), url("../assets/muir-wood.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../assets/muir-wood.jpg");
+  opacity: 95%;
   background-repeat: no-repeat;
   position: fixed;
   top: 0;
