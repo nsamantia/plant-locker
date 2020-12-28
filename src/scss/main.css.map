@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "ACIA,AAAA,CAAC,CAAA;EACG,UAAU,EAAC,UAAU;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb;;AAJD,AAAA,CAAC,CAAA;EACG,UAAU,EAAC,UAAU;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "main.scss",
+        "_config.scss",
+        "_login.scss",
+        "_config.scss",
+        "_landing.scss",
+        "_nav.scss",
+        "_new-folder.scss",
+        "in-folder.scss",
+        "plants-map.scss",
+        "register.scss",
+        "second-new-folder.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

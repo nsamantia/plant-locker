@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {loginUser} from '../../ducks/reducer'
 import {connect} from 'react-redux'
+import '../../scss/main.scss'
+
 
 const Login = (props) => {
 
