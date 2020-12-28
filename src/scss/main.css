@@ -15,7 +15,7 @@
 .login-button {
   background-color: #588157;
   color: white;
-  width: 120px;
+  width: 130px;
   height: 30px;
   border: none;
   border-radius: 14px;
@@ -23,7 +23,6 @@
 }
 
 .login-container {
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +32,45 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.image-container {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.2))), url("../assets/muir-wood.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../assets/muir-wood.jpg");
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  background-size: cover;
+}
+
+.image-container h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 50vw;
+}
+
+.image-container p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 50vw;
 }
 
 .login-form-container {
@@ -53,11 +91,15 @@
   height: 100vh;
 }
 
+.login-form-container img {
+  width: 300px;
+}
+
 .input-container input {
   border: none;
   border-bottom: 1px solid #DAD7CD;
   background-color: none;
-  width: 250px;
+  width: 275px;
   height: 30px;
 }
 /*# sourceMappingURL=main.css.map */

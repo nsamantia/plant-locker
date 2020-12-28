@@ -11,7 +11,7 @@ $primary-color: #588157;
 @mixin loginButton{
     background-color: $primary-color;
     color: white;
-    width: 120px;
+    width: 130px;
     height: 30px;
     border: none;
     border-radius: 14px;
@@ -23,7 +23,7 @@ $primary-color: #588157;
     border: none;
     border-bottom: 1px solid #DAD7CD;
     background-color: none;
-    width: 250px;
+    width: 275px;
     height: 30px;
 }
 
