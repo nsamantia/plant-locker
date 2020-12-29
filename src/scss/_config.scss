@@ -1,5 +1,9 @@
+
 //variables
 $primary-color: #588157;
+
+$primary-font: 'Bree Serif', serif;
+$secondary-font: 'Open Sans', sans-serif;
 
 //mixins
 @mixin flexCenter{
@@ -33,3 +37,6 @@ $primary-color: #588157;
     margin: 0;
     padding: 0;
 }
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap');

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -35,8 +37,8 @@
 }
 
 .image-container {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.2))), url("../assets/muir-wood.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../assets/muir-wood.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.3))), url("../assets/muir-wood.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("../assets/muir-wood.jpg");
   opacity: 95%;
   background-repeat: no-repeat;
   position: fixed;
@@ -58,6 +60,10 @@
           align-items: center;
   color: white;
   width: 50vw;
+  padding: 15px;
+  margin-top: 13px;
+  font-family: "Bree Serif", serif;
+  font-size: 38px;
 }
 
 .image-container p {
@@ -72,6 +78,11 @@
           align-items: center;
   color: white;
   width: 50vw;
+  padding: 25px;
+  margin-top: 10px;
+  line-height: 31px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 23px;
 }
 
 .login-form-container {
