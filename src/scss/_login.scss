@@ -1,24 +1,42 @@
 @import 'config';
 
 
-.login-contaner{
-    @include flexCenter;
+
+
+
+.bg-image{
+  
+    background-image: url('../assets/muir-wood.jpg');
+    
+    opacity: 95%;
+    background-repeat: no-repeat;
+    position: fixed; 
+    min-height: 100%;
+    width:100vw;
+    background-size: cover;
+    z-index: -2;
 
 }
 
-.image-container{
-    @include flexCenter;
-    flex-direction: column;
+.input-container{
 
-
-
-    .login-form-container{
-        img{
-            width: 0ch;
-            height: 0ch;
-        }
+    input{
+        
+        @include inputBox(325px, 35px, 25px);
+        
+        
     }
-}
+    
+    input:hover{
+        opacity: .7;
+     }
+
+     ::placeholder{
+         color: white;
+     }
+ }
+
+
 
 
 

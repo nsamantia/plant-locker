@@ -24,8 +24,8 @@ $secondary-font: 'Open Sans', sans-serif;
 
 @mixin inputBox($width-value, $height-value, $font-size){
     border: none;
-    border-bottom: 1px solid #DAD7CD;
-    background-color: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
     width: $width-value;
     height: $height-value;
     font-size: $font-size;

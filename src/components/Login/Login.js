@@ -24,10 +24,8 @@ const Login = (props) => {
 
     return(
         <div className="login-container">
-            
-        
-                <div className="login-form-container">
-                    {/* <div><img src={logo}/></div> */}
+            <div className="bg-image"></div>
+    
                     <div className="input-container">
                         <div>
                             <input type="text" name="username" placeholder="password" onChange={(e)=>setUsername(e.target.value)}/>
@@ -39,7 +37,7 @@ const Login = (props) => {
                     <div className="login-btn-container">
                         <button className="login-button" onClick ={()=>login()}>Sign in</button>
                     </div>
-                </div>
+                
             
 
         </div>
