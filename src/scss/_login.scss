@@ -1,6 +1,26 @@
 @import 'config';
 
 
+.login-contaner{
+    @include flexCenter;
+
+}
+
+.image-container{
+    @include flexCenter;
+    flex-direction: column;
+
+
+
+    .login-form-container{
+        img{
+            width: 0ch;
+            height: 0ch;
+        }
+    }
+}
+
+
 
 
 
