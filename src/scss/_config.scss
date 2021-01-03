@@ -23,12 +23,12 @@ $secondary-font: 'Open Sans', sans-serif;
 
 }
 
-@mixin inputBox{
+@mixin inputBox($width-value, $height-value){
     border: none;
     border-bottom: 1px solid #DAD7CD;
     background-color: none;
-    width: 275px;
-    height: 30px;
+    width: $width-value;
+    height: $height-value;
 }
 
 //resets
