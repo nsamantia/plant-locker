@@ -18,17 +18,18 @@ $secondary-font: 'Open Sans', sans-serif;
     width: 130px;
     height: 30px;
     border: none;
-    border-radius: 14px;
-    
+    border-radius: 14px;    
 
 }
 
-@mixin inputBox($width-value, $height-value){
+@mixin inputBox($width-value, $height-value, $font-size){
     border: none;
     border-bottom: 1px solid #DAD7CD;
     background-color: none;
     width: $width-value;
     height: $height-value;
+    font-size: $font-size;
+    font-family: $secondary-font;
 }
 
 //resets

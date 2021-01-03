@@ -5,79 +5,86 @@
 
 
 
-@media screen and(min-width: 1200px){
-    .login-button{
-        @include loginButton;
-        margin-top: 20px;
-    }
 
-    .login-container{
-        
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        
-        
-    }
 
-    .image-container{
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.3)
-        ), url('../assets/muir-wood.jpg');
-
-        opacity: 95%;
-        background-repeat: no-repeat;
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        min-height: 100%;
-        background-size: cover;
-
-        h1{
-            @include flexCenter;
-            color: white;
-            width: 50vw;
-            padding: 15px;
-            margin-top: 13px;
-            font-family: $primary-font;
-            font-size: 38px;
-            
-        }
-
-        p{
-            @include flexCenter;
-            color: white;
-            width: 50vw;
-            padding: 25px;
-            margin-top: 10px;
-            line-height: 31px;
-            font-family: $secondary-font;
-            font-size: 23px;
-        }
+// @media screen and(min-width: 1200px){
+//     .login-button{
+//         @include loginButton;
+//         margin-top: 20px;
     
-    }
-
-    .login-form-container{
-        @include flexCenter;
-        flex-direction: column;
-        width: 50vw;
-        height: 100vh;
+// }
+//     .login-container{
         
-        img{
-            width: 350px;
-            margin-top: -200px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: flex-end;
         
-        }
-    }
-
-
-    .input-container{
         
+//     }
 
-        input{
-            @include inputBox(275px, 33px);
+//     .image-container{
+//         background-image: linear-gradient(
+//             rgba(0, 0, 0, 0.7),
+//             rgba(0, 0, 0, 0.3)
+//         ), url('../assets/muir-wood.jpg');
+
+//         opacity: 95%;
+//         background-repeat: no-repeat;
+//         position: fixed; 
+//         top: 0; 
+//         left: 0; 
+//         min-height: 100%;
+//         background-size: cover;
+
+//         h1{
+//             @include flexCenter;
+//             color: white;
+//             width: 50vw;
+//             padding: 15px;
+//             margin-top: 13px;
+//             font-family: $primary-font;
+//             font-size: 38px;
             
-        }
-    }
-}
+//         }
+
+//         p{
+//             @include flexCenter;
+//             color: white;
+//             width: 50vw;
+//             padding: 25px;
+//             margin-top: 10px;
+//             line-height: 31px;
+//             font-family: $secondary-font;
+//             font-size: 23px;
+//         }
+    
+//     }
+
+//     .login-form-container{
+//         @include flexCenter;
+//         flex-direction: column;
+//         width: 50vw;
+//         height: 100vh;
+        
+//         img{
+//             width: 325px;
+//             margin-top: -250px;
+        
+//         }
+//     }
+
+
+//     .input-container{
+        
+
+//         input{
+//             @include inputBox(325px, 35px, 20px);
+            
+//         }
+
+//         input:hover{
+//             opacity: .7;
+
+//         }
+//     }
+// }
