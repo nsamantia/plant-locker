@@ -4,6 +4,7 @@ import {loginUser} from '../../ducks/reducer'
 import {connect} from 'react-redux'
 import '../../scss/main.scss'
 import logo from '../../assets/plant-locker.png'
+import {Link} from 'react-router-dom'
 
 
 
@@ -27,15 +28,19 @@ const Login = (props) => {
             <div className="bg-image"></div>
     
                     <div className="input-container">
+                        <h1>Plant Locker</h1>
                         <div>
                             <input type="text" name="username" placeholder="password" onChange={(e)=>setUsername(e.target.value)}/>
                         </div>
                         <div>
                             <input type="text" name="password" placeholder="username" onChange={(e)=>setPassword(e.target.value)}/>
                         </div>
-                    </div>
-                    <div className="login-btn-container">
-                        <button className="login-button" onClick ={()=>login()}>Sign in</button>
+                        <div className="login-btn-container">
+                            <button className="login-button" onClick ={()=>login()}>Sign in</button>
+                        </div>
+                        <div>
+                            <Link to='/'><button>Back</button></Link>
+                        </div>
                     </div>
                 
             

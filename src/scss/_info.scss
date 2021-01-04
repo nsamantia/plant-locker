@@ -2,6 +2,8 @@
     @include flexCenter;
     flex-direction: column;
     padding: 10%;
+    height: 100vh;
+    color: white;
 
     h1{
         font-family: $primary-font;
@@ -14,5 +16,18 @@
     p{
         font-family: $secondary-font;
         
+    }
+
+    .bg-image{
+  
+        background-image: url('../assets/forrest.jpg');
+        opacity: 95%;
+        background-repeat: no-repeat;
+        position: fixed; 
+        min-height: 100%;
+        width:100vw;
+        background-size: cover;
+        z-index: -2;
+    
     }
 }

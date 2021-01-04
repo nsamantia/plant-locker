@@ -9,6 +9,7 @@ const Info = () => {
 
     return(
         <div className="info-container">
+            <div className="bg-image"></div>
             
                 <h1>Plant Locker</h1>
                 <h2>Digital storage for your plants</h2>
