@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const initialState = {
-    folder: []
+    folder: {}
 }
 
 const GET_FOLDER = 'GET_FOLDER'
@@ -26,7 +26,7 @@ export default function folderReducer (state = initialState, action) {
         //     return initialState
 
         case GET_FOLDER:
-            return{...state, folder: [...state.folder, action.payload]}
+            return{...state, folder: action.payload}
         default:
             return state
     }
