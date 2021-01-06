@@ -30,10 +30,10 @@ const Login = (props) => {
                     <div className="input-container">
                         <h1>Plant Locker</h1>
                         <div>
-                            <input type="text" name="username" placeholder="password" onChange={(e)=>setUsername(e.target.value)}/>
+                            <input type="text" name="username" placeholder="Username" onChange={(e)=>setUsername(e.target.value)}/>
                         </div>
                         <div>
-                            <input type="text" name="password" placeholder="username" onChange={(e)=>setPassword(e.target.value)}/>
+                            <input type="text" name="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
                         </div>
                         <div className="login-btn-container">
                             <button className="login-button" onClick ={()=>login()}>Sign in</button>
