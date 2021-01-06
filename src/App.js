@@ -7,7 +7,7 @@ function App(props) {
   return (
     <div className="App">
 
-      {props.location.pathname ==='/' || props.location.pathname === '/Login' || props.location.pathname === '/Register' ? null: <Nav />}
+      {props.location.pathname ==='/' || props.location.pathname === '/Login' || props.location.pathname === '/register' ? null: <Nav />}
       
 
       {routes}

@@ -12,7 +12,7 @@ export default (
     <Switch>
         <Route exact path ="/" component={Info}/>
         <Route path ="/login" component={Login}/>
-        <Route path = "/register" component={Register}/>
+        <Route path = "/Register" component={Register}/>
         <Route path="/Landing" component={Landing}/>
         <Route path ="/NewFolder" component={NewFolder}/>
         <Route path ="/InFolder/:category_id" component={InFolder} />
