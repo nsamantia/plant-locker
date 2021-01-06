@@ -10,6 +10,8 @@ CREATE TABLE plants_pl(
 id SERIAL PRIMARY KEY,
 plant varchar(70) NOT NULL,
 plant_category_id int NOT NULL REFERENCES category_pl(category_id),
+plant_image text,
+plant_comment varchar(1000),
 user_id INT REFERENCES users_pl(id)
 
 )
