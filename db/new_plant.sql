@@ -1,4 +1,4 @@
 INSERT INTO plants_pl
-(user_id, plant, plant_category_id)
+(user_id, plant, plant_category_id, plant_image, plant_comment)
 VALUES
-($1, $2, $3)
+($1, $2, $3, $4, $5)

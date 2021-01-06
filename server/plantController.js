@@ -15,8 +15,10 @@ module.exports = {
         const {id} = req.session.user
         const {plant} = req.body
         const {plant_category_id} = req.params
+        const {plant_image} = req.body
+        const {plant_comment} = req.body
 
-        const newPlant = await db.new_plant(id, plant, plant_category_id)
+        const newPlant = await db.new_plant(id, plant, plant_category_id, plant_image, plant_comment)
         res.status(200).send(newPlant)
     },
 
