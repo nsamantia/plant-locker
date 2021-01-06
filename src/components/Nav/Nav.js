@@ -20,7 +20,7 @@ const Nav = (props) => {
         <div>
             <div>
                 <ul>
-                    <Link to='./Landing'><li><img src="https://i.imgur.com/ZKhcyGl.png" /></li></Link>
+                    <Link to='./Landing'><li>Plant Locker</li></Link>
                     {/* <Link><Li></Li></Link>
                     <Link><Li></Li></Link> */}
                 </ul>
