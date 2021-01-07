@@ -22,8 +22,9 @@ module.exports = {
         const {id} = req.session.user
         const {category} = req.body
         const {category_one_id} = req.params
+        const {category_image} = req.body
 
-        const newFolder = await db.second_new_folder(id, category, category_one_id)
+        const newFolder = await db.second_new_folder(id, category, category_one_id, category_image)
         res.status(200).send(newFolder)
     },
 

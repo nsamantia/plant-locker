@@ -21,8 +21,9 @@ module.exports = {
         const db = req.app.get('db')
         const {id} = req.session.user
         const {category} = req.body
+        const {category_image} = req.body
 
-        const newFolder = await db.new_folder(id, category)
+        const newFolder = await db.new_folder(id, category, category_image)
         res.status(200).send(newFolder)
     },
     deleteFolder: async(req, res) => {
