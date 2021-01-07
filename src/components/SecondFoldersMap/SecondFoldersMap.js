@@ -9,7 +9,7 @@ const SecondFoldersMap = (props) => {
 
    
     const getFolderTwo = () => {
-        props.history.push(`/InSecondFolder/${props.category_id}`)
+        props.history.push(`/InSecondFolder/${props.folder.folder}`)
         // props.getFolder(props.category_id)
         // getFolder()
     }
@@ -25,6 +25,7 @@ const SecondFoldersMap = (props) => {
         <div>
             <button onClick={()=> getFolderTwo() }>
                 <p>{props.category}</p>
+                
 
             </button>
             <button onClick={()=>deleteFolder()}>X</button>
