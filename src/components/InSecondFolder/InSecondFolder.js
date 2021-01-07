@@ -1,33 +1,22 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import SecondFoldersMap from '../SecondFoldersMap/SecondFoldersMap'
+import FoldersMap from '../FoldersMap/FoldersMap'
 import PlantsMap from '../PlantsMap/PlantsMap'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
 
-const InFolder = (props) =>{
 
-    const [folders, setFolders] = useState([])
+
+const InSecondFolder = (props) =>{
+
     const [plants, setPlants] = useState([])
     const [search, setSearch] = useState('')
-
-    useEffect(() => {
-        getFolders()
-        
-    }, [folders])
 
     useEffect(() => {
         getPlants(props.match.params.category_id)
 
     }, [plants])
-
-    const getFolders = () => {
-
-            axios.get(`/api/folder/second/${props.match.params.category_id}/?search=${search}`)
-            .then(res => setFolders(res.data))
-
-    }
 
     const getPlants = () => {
         axios.get(`/api/plants/${props.match.params.category_id}`)
@@ -39,22 +28,8 @@ const InFolder = (props) =>{
 
         <div>
             <input type="text" name="search" onChange={(e)=> setSearch(e.target.value)}/>
-            <button onClick={() => getFolders()}>Search</button>
-            <Link to="/SecondNewFolder"><button>New Folder</button></Link>
-
-
-            <div>
-                {folders.map(e => {
-                    return(
-                        <SecondFoldersMap
-                        folder = {e}
-                        category={e.category}
-                        category_id={e.category_id}
-                        setFolders={setFolders}
-                        />
-                    )
-                })}
-            </div>
+            <button onClick={() => getPlants()}>Search</button>
+            
 
             <div>
                 {plants.map(e => {
@@ -76,4 +51,4 @@ const InFolder = (props) =>{
 }
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps)(InFolder)
+export default connect(mapStateToProps)(InSecondFolder)

@@ -5,6 +5,7 @@ import Register from './components/Register/Register'
 import Landing from './components/Landing/Landing'
 import NewFolder from './components/NewFolder/NewFolder'
 import InFolder from './components/InFolder/InFolder'
+import InSecondFolder from './components/InSecondFolder/InSecondFolder'
 import SecondNewFolder from './components/SecondNewFolder/SecondNewFolder'
 
 
@@ -16,6 +17,7 @@ export default (
         <Route path="/Landing" component={Landing}/>
         <Route path ="/NewFolder" component={NewFolder}/>
         <Route path ="/InFolder/:category_id" component={InFolder} />
+        <Route path ="/InSecondFolder/:category_id" component={InSecondFolder} />
         <Route path = "/SecondNewFolder" component={SecondNewFolder} />
         
     </Switch>

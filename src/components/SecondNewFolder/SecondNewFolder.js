@@ -8,6 +8,7 @@ import {getFolder} from '../../ducks/folderReducer'
 const SecondNewFolder = (props) => {
 
     const [category, setCategory] = useState('')
+    const [categoryImage, setCategoryImage] = useState('')
     const [folder, setFolder] = useState(props.folder.folder)
 
     const newFolder = () => {
@@ -22,6 +23,7 @@ const SecondNewFolder = (props) => {
                 <p>New Folder</p>
             </div>
             <input type="text" name="category" onChange={(e)=>setCategory(e.target.value)}/>
+            
             <Link to="/InFolder"><button onClick={() => newFolder()}>Upload New Folder</button></Link>
 
         </div>
