@@ -1,0 +1,17 @@
+@import "config";
+
+.plant-map-container {
+  @include flexCenter;
+
+  .plant-button {
+    @include plantButton;
+    @include flexCenter;
+
+    img {
+      display: flex;
+      justify-content: flex-start;
+      width: 45px;
+      height: auto;
+    }
+  }
+}

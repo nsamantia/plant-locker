@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import '../../scss/_plants-map.scss'
 import {connect} from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
@@ -13,8 +14,8 @@ const PlantsMap = (props) => {
 
 
     return(
-        <div>
-            <button >
+        <div className="plant-map-container">
+            <button className="plant-button">
                 <p>{props.plant_name}</p>
                 <img src={props.plant_image} />
 

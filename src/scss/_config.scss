@@ -1,45 +1,47 @@
-
 //variables
-$primary-color: #819EAB;
-$primary-font: 'Bree Serif', serif;
-$secondary-font: 'Open Sans', sans-serif;
-
+$primary-color: #819eab;
+$primary-font: "Bree Serif", serif;
+$secondary-font: "Open Sans", sans-serif;
 
 //mixins
-@mixin flexCenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin loginButton{
-    background-color: $primary-color;
-    color: white;
-    width: 150px;
-    height: 32px;
-    border: none;
-    border-radius: 14px;    
-    font-family: $secondary-font;
-    font-size: 16px;
-
+@mixin loginButton {
+  background-color: $primary-color;
+  color: white;
+  width: 150px;
+  height: 32px;
+  border: none;
+  border-radius: 14px;
+  font-family: $secondary-font;
+  font-size: 16px;
 }
 
-@mixin inputBox($width-value, $height-value, $font-size){
-    border: none;
-    border-bottom: 2px solid white;
-    background-color: transparent;
-    width: $width-value;
-    height: $height-value;
-    font-size: $font-size;
-    font-family: $secondary-font;
+@mixin inputBox($width-value, $height-value, $font-size) {
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  width: $width-value;
+  height: $height-value;
+  font-size: $font-size;
+  font-family: $secondary-font;
+}
+
+@mixin plantButton {
+  width: 60vw;
+  height: 15vw;
 }
 
 //resets
-*{
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 //fonts
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap");
