@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {loginUser} from '../../ducks/reducer'
 import {connect} from 'react-redux'
-import '../../scss/main.scss'
+import '../../scss/_login.scss'
 import logo from '../../assets/plant-locker.png'
 import {Link} from 'react-router-dom'
 

@@ -61,9 +61,10 @@ const InFolder = (props) =>{
                     return(
                         <PlantsMap 
                         plants = {e}
-                        plant_name={e.plant}
-                        plant_id={e.id}
-                        setPlants={setPlants}
+                        plant_name = {e.plant}
+                        plant_id = {e.id}
+                        plant_image = {e.plant_image}
+                        setPlants = {setPlants}
                         />
                         
                     )

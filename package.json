@@ -49,5 +49,8 @@
     ]
   },
   "main": "server/index.js",
-  "proxy": "http://localhost:4444"
+  "proxy": "http://localhost:4444",
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
 }

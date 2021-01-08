@@ -16,6 +16,7 @@ const PlantsMap = (props) => {
         <div>
             <button >
                 <p>{props.plant_name}</p>
+                <img src={props.plant_image} />
 
             </button>
             <button onClick={() => deletePlant()}>X</button>
