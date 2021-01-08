@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import SecondFoldersMap from '../SecondFoldersMap/SecondFoldersMap'
 import PlantsMap from '../PlantsMap/PlantsMap'
+import '../../scss/_in-folder.scss'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 
@@ -37,7 +38,7 @@ const InFolder = (props) =>{
 
     return(
 
-        <div>
+        <div className="in-folder-container">
             <input type="text" name="search" onChange={(e)=> setSearch(e.target.value)}/>
             <button onClick={() => getFolders()}>Search</button>
             <Link to="/SecondNewFolder"><button>New Folder</button></Link>

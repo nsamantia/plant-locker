@@ -2,6 +2,7 @@
 $primary-color: #819eab;
 $primary-font: "Bree Serif", serif;
 $secondary-font: "Open Sans", sans-serif;
+$background-color: #eae3ea;
 
 //mixins
 @mixin flexCenter {
@@ -34,6 +35,9 @@ $secondary-font: "Open Sans", sans-serif;
 @mixin plantButton {
   width: 60vw;
   height: 15vw;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2px;
 }
 
 //resets
