@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
+import '../../scss/_folders-map.scss'
 import { withRouter } from 'react-router-dom'
 import {getFolder} from '../../ducks/folderReducer'
 
@@ -24,8 +25,8 @@ const FoldersMap = (props) => {
     
 
     return(
-        <div>
-            <button onClick={()=> getFolderOne() }>
+        <div className = "folder-map-container">
+            <button className="folder-button" onClick={()=> getFolderOne() }>
                 <p>{props.category}</p>
                 <img src={props.category_image} />
 

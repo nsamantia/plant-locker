@@ -2,7 +2,8 @@
 $primary-color: #819eab;
 $primary-font: "Bree Serif", serif;
 $secondary-font: "Open Sans", sans-serif;
-$background-color: #eae3ea;
+$background-color: #f0efeb;
+$font-color: #3d3d3d;
 
 //mixins
 @mixin flexCenter {
@@ -34,10 +35,21 @@ $background-color: #eae3ea;
 
 @mixin plantButton {
   width: 60vw;
-  height: 15vw;
+  height: 8vh;
+  border: none;
+  border-radius: 10px;
+  margin-top: 5px;
+  background-color: #b7b7a4;
+  color: white;
+}
+
+@mixin folderButton {
+  width: 70vw;
+  height: 10vh;
   border: none;
   border-radius: 10px;
   margin-top: 2px;
+  background-color: #ddbea9;
 }
 
 //resets

@@ -1,0 +1,7 @@
+@import "config";
+
+.folder-map-container {
+  .folder-button {
+    @include folderButton;
+  }
+}
