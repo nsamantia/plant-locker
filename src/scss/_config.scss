@@ -44,12 +44,21 @@ $font-color: #3d3d3d;
 }
 
 @mixin folderButton {
-  width: 70vw;
-  height: 10vh;
+  width: 250px;
+  height: 100px;
   border: none;
   border-radius: 10px;
   margin-top: 2px;
-  background-color: #ddbea9;
+}
+
+@mixin folderP {
+  font-family: $secondary-font;
+  font-size: 12px;
+}
+
+@mixin folderCategory {
+  font-family: $primary-font;
+  font-size: 16px;
 }
 
 //resets

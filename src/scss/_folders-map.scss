@@ -3,5 +3,13 @@
 .folder-map-container {
   .folder-button {
     @include folderButton;
+
+    .folder-p {
+      @include folderP;
+    }
+
+    .folder-category {
+      @include folderCategory;
+    }
   }
 }
