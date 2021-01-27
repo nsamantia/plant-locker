@@ -1,59 +1,51 @@
-import React, {useState, useEffect} from 'react'
-import axios from 'axios'
-import FoldersMap from '../FoldersMap/FoldersMap'
-import {Link} from 'react-router-dom'
-import {getFolder} from '../../ducks/folderReducer'
-import {connect} from 'react-redux'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import FoldersMap from "../FoldersMap/FoldersMap";
+import { Link } from "react-router-dom";
+import { getFolder } from "../../ducks/folderReducer";
+import { connect } from "react-redux";
 
 const Landing = (props) => {
+  const [folders, setFolders] = useState([]);
+  const [search, setSearch] = useState("");
 
-    const [folders, setFolders] = useState([])
-    const [search, setSearch] = useState('')
-    
+  useEffect(() => {
+    getFolders();
+  }, [folders]);
 
-    useEffect(() => {
-        getFolders()
-    }, [folders])
+  const getFolders = () => {
+    axios
+      .get(`/api/folder/?search=${search}`)
+      .then((res) => setFolders(res.data));
+  };
 
+  return (
+    <div>
+      <input
+        type="text"
+        name="search"
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <button onClick={() => getFolders()}>Search</button>
+      <Link to="/NewFolder">
+        <button>New Folder</button>
+      </Link>
 
-    const getFolders = () => {
-        axios.get(`/api/folder/?search=${search}`)
-        .then(res => setFolders(res.data))
-    }
+      {folders.map((e) => {
+        return (
+          <FoldersMap
+            folder={e}
+            category={e.category}
+            category_id={e.category_id}
+            setFolders={setFolders}
+            getFolder={getFolder}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
+const mapStateToProps = (reduxState) => reduxState;
 
-    return(
-        <div>
-            
-            <input type="text" name="search" onChange={(e)=> setSearch(e.target.value)}/>
-            <button onClick={() => getFolders()}>Search</button>
-            <Link to="/NewFolder"><button>New Folder</button></Link>
-
-            
-
-
-
-        {folders.map(e => {
-            return(
-                <FoldersMap 
-                folder = {e}
-                category={e.category}
-                category_id={e.category_id}
-                setFolders={setFolders}
-                getFolder={getFolder}
-                
-                    
-                />
-            )
-        })}
-
-
-        </div>
-    )
-
-
-}
-
-const mapStateToProps = reduxState => reduxState
-
-export default connect(mapStateToProps, {getFolder})(Landing)
+export default connect(mapStateToProps, { getFolder })(Landing);
