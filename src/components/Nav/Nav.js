@@ -16,7 +16,7 @@ const Nav = (props) => {
     <div>
       <div>
         <ul>
-          <Link to="./Landing">
+          <Link to="/Landing">
             <li>Plant Locker</li>
           </Link>
           {/* <Link><Li></Li></Link>
