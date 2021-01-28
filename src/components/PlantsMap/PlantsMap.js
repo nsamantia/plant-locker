@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import "../../scss/_plants-map.scss";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PlantsMap = (props) => {
   const deletePlant = () => {
@@ -15,7 +15,7 @@ const PlantsMap = (props) => {
     <div className="plant-map-container">
       <button className="plant-button">
         <p>{props.plant_name}</p>
-        <img src={props.plant_image} />
+        <img src={props.plant_image} alt="" />
       </button>
       <button onClick={() => deletePlant()}>X</button>
     </div>
