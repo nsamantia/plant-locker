@@ -44,6 +44,9 @@ const InFolder = (props) => {
       <Link to="/SecondNewFolder">
         <button>New Folder</button>
       </Link>
+      <Link to="/NewPlant">
+        <button>New Plant</button>
+      </Link>
 
       <div>
         {folders.map((e) => {

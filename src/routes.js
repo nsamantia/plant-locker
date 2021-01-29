@@ -8,6 +8,7 @@ import InFolder from "./components/InFolder/InFolder";
 import InSecondFolder from "./components/InSecondFolder/InSecondFolder";
 import SecondNewFolder from "./components/SecondNewFolder/SecondNewFolder";
 import InPlant from "./components/InPlant/InPlant";
+import NewPlant from "./components/NewPlant/NewPlant";
 
 export default (
   <Switch>
@@ -20,5 +21,6 @@ export default (
     <Route path="/InSecondFolder/:category_id" component={InSecondFolder} />
     <Route path="/SecondNewFolder" component={SecondNewFolder} />
     <Route path="/InPLant:id" component={InPlant} />
+    <Route path="/NewPlant" component={NewPlant} />
   </Switch>
 );

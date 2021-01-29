@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NewFolder = () => {
   const [category, setCategory] = useState("");
 
-  const newFolder = () => {
+  const uploadFolder = () => {
     axios.post("/api/folder/new", { category });
   };
 
@@ -20,7 +20,7 @@ const NewFolder = () => {
         onChange={(e) => setCategory(e.target.value)}
       />
       <Link to="/Landing">
-        <button onClick={() => newFolder()}>Upload New Folder</button>
+        <button onClick={() => uploadFolder()}>Upload New Folder</button>
       </Link>
     </div>
   );
