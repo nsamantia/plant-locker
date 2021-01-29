@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { getFolder } from "../../ducks/folderReducer";
 
 const NewPlant = (props) => {
-  const [plantImage, setPlantImage] = useState("");
-  const [plant, setPlant] = useState("");
-  const [plantComment, setPlantComment] = useState("");
+  let [plantImage, setPlantImage] = useState("");
+  let [plant, setPlant] = useState("");
+  let [plantComment, setPlantComment] = useState("");
   const [folder, setFolder] = useState(props.folder.folder);
 
   useEffect(() => {}, [plantImage]);
@@ -17,6 +18,10 @@ const NewPlant = (props) => {
       plantImage,
       plantComment,
     });
+    setPlantImage("");
+    setPlantImage("");
+    setPlantComment("");
+    props.history.goBack();
   };
 
   return (
@@ -24,7 +29,7 @@ const NewPlant = (props) => {
       <h1>Upload a New Plant</h1>
       <form>
         <label>
-          Link:
+          Image Link:
           <input type="text" onChange={(e) => setPlantImage(e.target.value)} />
         </label>
         <label>
@@ -39,11 +44,13 @@ const NewPlant = (props) => {
           />
         </label>
       </form>
-      <button onClick={() => uploadPlant()}>Upload</button>
+      <button type="reset" onClick={() => uploadPlant()}>
+        Upload
+      </button>
       <img src={plantImage} alt="" />
     </div>
   );
 };
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps, { getFolder })(NewPlant);
+export default connect(mapStateToProps, { getFolder })(withRouter(NewPlant));
