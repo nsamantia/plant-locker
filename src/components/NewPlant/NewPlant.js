@@ -4,13 +4,19 @@ import { connect } from "react-redux";
 import { getFolder } from "../../ducks/folderReducer";
 
 const NewPlant = (props) => {
-  const [link, setLink] = useState("");
+  const [plantImage, setPlantImage] = useState("");
+  const [plant, setPlant] = useState("");
+  const [plantComment, setPlantComment] = useState("");
   const [folder, setFolder] = useState(props.folder.folder);
 
-  useEffect(() => {}, [link]);
+  useEffect(() => {}, [plantImage]);
 
   const uploadPlant = () => {
-    axios.post(`/api/plants/new/${folder}`);
+    axios.post(`/api/plants/new/${folder}`, {
+      plant,
+      plantImage,
+      plantComment,
+    });
   };
 
   return (
@@ -19,10 +25,22 @@ const NewPlant = (props) => {
       <form>
         <label>
           Link:
-          <input type="text" onChange={(e) => setLink(e.target.value)} />
+          <input type="text" onChange={(e) => setPlantImage(e.target.value)} />
+        </label>
+        <label>
+          Plant name:
+          <input type="text" onChange={(e) => setPlant(e.target.value)} />
+        </label>
+        <label>
+          Notes:
+          <input
+            type="text"
+            onChange={(e) => setPlantComment(e.target.value)}
+          />
         </label>
       </form>
-      <img src={link} alt="" />
+      <button onClick={() => uploadPlant()}>Upload</button>
+      <img src={plantImage} alt="" />
     </div>
   );
 };
