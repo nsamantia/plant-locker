@@ -16,12 +16,7 @@ const NewPlant = (props) => {
   return (
     <div>
       <h1>Upload a New Plant</h1>
-      <input
-        type="file"
-        onChange={(e) =>
-          setSelectedFile(URL.createObjectURL(e.target.files[0]))
-        }
-      />
+      <input type="file" onChange={(e) => setSelectedFile(e.target.files[0])} />
       <img src={selectedFile} alt="uploaded plant" />
     </div>
   );
