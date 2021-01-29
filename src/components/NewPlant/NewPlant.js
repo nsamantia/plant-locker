@@ -17,7 +17,7 @@ const NewPlant = (props) => {
     <div>
       <h1>Upload a New Plant</h1>
       <input type="file" onChange={(e) => setSelectedFile(e.target.files[0])} />
-      <img src={selectedFile} alt="uploaded plant" />
+      {/* <img src={selectedFile} alt="uploaded plant" /> */}
     </div>
   );
 };
