@@ -3,12 +3,15 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginUser } from "../../ducks/reducer";
+import { getFolder } from "../../ducks/folderReducer";
 
 const Nav = (props) => {
-  //keeps users on session when they refresh the page
   useEffect(() => {
+    // Keeps users on session when page is refreshed
     axios.get(`/api/auth/getUser`).then((res) => {
       props.loginUser(res.data);
+      // Keeps folder id from clearing when page is refreshed
+      // props.getFolder(props.match.params);
     });
   }, []);
 
@@ -29,4 +32,4 @@ const Nav = (props) => {
 
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps, { loginUser })(Nav);
+export default connect(mapStateToProps, { loginUser, getFolder })(Nav);
