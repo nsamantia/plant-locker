@@ -20,7 +20,7 @@ export default (
     <Route path="/InFolder/:category_id" component={InFolder} />
     <Route path="/InSecondFolder/:category_id" component={InSecondFolder} />
     <Route path="/SecondNewFolder" component={SecondNewFolder} />
-    <Route path="/InPLant:id" component={InPlant} />
+    <Route path="/InPLant/:id" component={InPlant} />
     <Route path="/NewPlant" component={NewPlant} />
   </Switch>
 );

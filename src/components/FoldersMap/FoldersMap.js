@@ -8,12 +8,13 @@ import { getFolder } from "../../ducks/folderReducer";
 const FoldersMap = (props) => {
   // console.log(props.category_id)
 
+  // Pushes to specific folder page - "opens" that folder
   const getFolderOne = () => {
     props.history.push(`/InFolder/${props.category_id}`);
     props.getFolder(props.category_id);
     getFolder();
   };
-
+  // Deletes single folder
   const deleteFolder = () => {
     axios
       .delete(`/api/folder/delete/${props.category_id}`)
