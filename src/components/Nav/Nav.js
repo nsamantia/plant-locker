@@ -11,7 +11,6 @@ const Nav = (props) => {
     axios.get(`/api/auth/getUser`).then((res) => {
       props.loginUser(res.data);
       // Keeps folder id from clearing when page is refreshed
-      // props.getFolder(props.match.params);
     });
   }, []);
 

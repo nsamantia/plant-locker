@@ -1,52 +1,40 @@
-@import 'config';
+@import "config";
 
-
-
-
-
-.bg-image{
-  
-    background-image: url('../assets/forrest.jpg');
-    opacity: 95%;
-    background-repeat: no-repeat;
-    position: fixed; 
-    min-height: 100%;
-    width:100vw;
-    background-size: cover;
-    z-index: -2;
-
+.bg-image {
+  background-image: url("../assets/wfh_8.svg");
+  opacity: 95%;
+  background-repeat: no-repeat;
+  position: fixed;
+  min-height: 100%;
+  width: 100vw;
+  background-size: cover;
+  z-index: -2;
 }
 
-.input-container{
+.input-container {
+  @include flexCenter;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 
-    @include flexCenter;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+  input {
+    @include inputBox(325px, 35px, 25px);
+  }
 
-    input{
-        
-        @include inputBox(325px, 35px, 25px);
-        
-        
-    }
-    
-    input:hover{
-        opacity: .7;
-     }
+  input:hover {
+    opacity: 0.7;
+  }
 
-     ::placeholder{
-         color: white;
-     }
+  ::placeholder {
+    color: white;
+  }
 
-     h1{
-        font-family: $primary-font;
-        color:white;
-    }
-    button{
-        @include loginButton;
-        margin-top: 15px;
-    }
- }
-
-
+  h1 {
+    font-family: $primary-font;
+    color: white;
+  }
+  button {
+    @include loginButton;
+    margin-top: 15px;
+  }
+}

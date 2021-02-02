@@ -1,83 +1,68 @@
-.info-container{
-    @include flexCenter;
-    flex-direction: column;
-    padding: 10%;
-    height: 100vh;
-    color: white;
+.info-container {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 5%;
+  color: black;
 
-    h1{
-        font-family: $primary-font;
-        font-size: 44px;
-        
-    }
+  h1 {
+    font-family: $primary-font;
+    font-size: 44px;
+  }
 
-    h2{
-        font-family: $secondary-font;
-        font-size: 20px;
-        
-        
-    }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 20px;
+  }
 
-    p{
-        font-family: $secondary-font;
-        font-size: 16px;
-        margin-top: 35px;
-        font-weight: 600;
-        
-        
-    }
-    
-    
-    button{
-        @include loginButton;
-        margin-top: 15px;
-    }
+  p {
+    font-family: $secondary-font;
+    padding: 5%;
+    font-size: 15px;
+    font-weight: 600;
+    position: fixed;
+    bottom: 13%;
+  }
 
+  .info-button {
+    padding: 3px;
+  }
 
-    .button-container{
-        margin-top: 10px;
-    }
+  button {
+    @include loginButton;
+  }
 
-    .bg-image{
-  
-        background-image: url('../assets/forrest.jpg');
-        opacity: 95%;
-        background-repeat: no-repeat;
-        position: fixed; 
-        min-height: 100%;
-        width:100vw;
-        background-size: cover;
-        z-index: -2;
-    
-    }
-    
+  .button-container {
+    position: fixed;
+    bottom: 2%;
+  }
+
+  .bg-image {
+    background-image: url("../assets/wfh_8.svg");
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 15%;
+    width: 100vw;
+    background-size: contain;
+    z-index: -2;
+  }
 }
 
-
-
-@media only screen and(min-width: 800px){
-
-
-    .info-container{
-
-        h1{
-            font-size: 54px;
-        }
-
-        h2{
-            font-size: 24px;
-        }
-
-        p{
-            font-size: 18px;
-        }
-
-        .button-container{
-            margin-top: 40px;
-        }
-
+@media only screen and(min-width: 800px) {
+  .info-container {
+    h1 {
+      font-size: 5px;
     }
-        
-    
 
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .button-container {
+      margin-top: 40px;
+    }
+  }
 }

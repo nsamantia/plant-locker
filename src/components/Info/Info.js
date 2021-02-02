@@ -18,13 +18,13 @@ const Info = () => {
         store their plant information digitally.
       </p>
 
-      <div>
-        <div className="button-container">
+      <div className="button-container">
+        <div className="info-button">
           <Link to="/Login">
             <button>Sign In</button>
           </Link>
         </div>
-        <div>
+        <div className="info-button">
           <Link to="/register">
             <button>Register</button>
           </Link>
