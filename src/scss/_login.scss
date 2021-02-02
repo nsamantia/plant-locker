@@ -1,15 +1,5 @@
 @import "config";
 
-.bg-image {
-  opacity: 95%;
-  background-repeat: no-repeat;
-  position: fixed;
-  min-height: 100%;
-  width: 100vw;
-  background-size: cover;
-  z-index: -2;
-}
-
 .input-container {
   @include flexCenter;
   flex-direction: column;
