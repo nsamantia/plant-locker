@@ -6,21 +6,22 @@
 
   h1 {
     font-family: $primary-font;
+    color: $font-color;
     font-size: 44px;
   }
 
   h2 {
     font-family: $secondary-font;
+    color: $font-color;
     font-size: 20px;
   }
 
   p {
     font-family: $secondary-font;
+    color: $font-color;
     padding: 5%;
     font-size: 15px;
     font-weight: 600;
-    position: fixed;
-    bottom: 13%;
   }
 
   .info-button {
@@ -31,19 +32,9 @@
     @include loginButton;
   }
 
-  .button-container {
-    position: fixed;
-    bottom: 2%;
-  }
-
-  .bg-image {
-    background-image: url("../assets/wfh_8.svg");
-    background-repeat: no-repeat;
-    position: fixed;
-    top: 15%;
-    width: 100vw;
-    background-size: contain;
-    z-index: -2;
+  .bg-image-container {
+    @include flexCenter;
+    height: 250px;
   }
 }
 

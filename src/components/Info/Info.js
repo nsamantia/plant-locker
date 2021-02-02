@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../../scss/main.scss";
 import { Link } from "react-router-dom";
-
+import wfh_8 from "../../assets/wfh_8.svg";
 const Info = () => {
   return (
     <div className="info-container">
-      <div className="bg-image"></div>
-
       <h1>Plant Locker</h1>
       <h2>Digital storage for your plants</h2>
+      <div className="bg-image-container">
+        <img className="bg-image" src={wfh_8} alt="woman with plant" />
+      </div>
       <p>
         This app was created with the purpose of reducing plastic building up in
         landfills and spilling over into habitats. Gardening is a productive
