@@ -11,7 +11,10 @@ const InSecondFolder = (props) => {
 
   useEffect(() => {
     getPlants(props.match.params.category_id);
-  });
+    return () => {
+      setPlants([]);
+    };
+  }, []);
 
   const getPlants = () => {
     axios

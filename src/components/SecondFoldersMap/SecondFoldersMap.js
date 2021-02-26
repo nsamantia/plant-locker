@@ -5,7 +5,6 @@ import { withRouter } from "react-router-dom";
 import { getFolder } from "../../ducks/folderReducer";
 
 const SecondFoldersMap = (props) => {
-  console.log(props.category_id);
   const getFolderTwo = () => {
     props.history.push(`/InSecondFolder/${props.category_id}`);
     // props.getFolder(props.category_id)
