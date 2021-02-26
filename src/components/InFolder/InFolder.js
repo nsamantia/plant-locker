@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SecondFoldersMap from "../SecondFoldersMap/SecondFoldersMap";
 import PlantsMap from "../PlantsMap/PlantsMap";
-import "../../scss/_in-folder.scss";
+
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -13,24 +13,26 @@ const InFolder = (props) => {
 
   useEffect(() => {
     getFolders();
-  }, [folders]);
+  });
 
   useEffect(() => {
     getPlants(props.match.params.category_id);
-  }, [plants]);
+  });
 
   const getFolders = () => {
     axios
       .get(
         `/api/folder/second/${props.match.params.category_id}/?search=${search}`
       )
-      .then((res) => setFolders(res.data));
+      .then((res) => setFolders(res.data))
+      .catch((err) => console.log(err));
   };
 
   const getPlants = () => {
     axios
       .get(`/api/plants/${props.match.params.category_id}`)
-      .then((res) => setPlants(res.data));
+      .then((res) => setPlants(res.data))
+      .catch((err) => console.log(err));
   };
 
   return (

@@ -11,12 +11,13 @@ const InSecondFolder = (props) => {
 
   useEffect(() => {
     getPlants(props.match.params.category_id);
-  }, [plants]);
+  });
 
   const getPlants = () => {
     axios
       .get(`/api/plants/${props.match.params.category_id}`)
-      .then((res) => setPlants(res.data));
+      .then((res) => setPlants(res.data))
+      .catch((err) => console.log(err));
   };
 
   return (

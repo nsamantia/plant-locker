@@ -5,8 +5,9 @@ import { withRouter } from "react-router-dom";
 import { getFolder } from "../../ducks/folderReducer";
 
 const SecondFoldersMap = (props) => {
+  console.log(props.category_id);
   const getFolderTwo = () => {
-    props.history.push(`/InSecondFolder/${props.folder.folder}`);
+    props.history.push(`/InSecondFolder/${props.category_id}`);
     // props.getFolder(props.category_id)
     // getFolder()
   };
@@ -14,7 +15,8 @@ const SecondFoldersMap = (props) => {
   const deleteFolder = () => {
     axios
       .delete(`/api/second/folder/delete/${props.category_id}`)
-      .then((res) => props.setFolders(res.data));
+      .then((res) => props.setFolders(res.data))
+      .catch((err) => console.log(err));
   };
 
   return (
