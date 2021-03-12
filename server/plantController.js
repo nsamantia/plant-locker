@@ -33,4 +33,13 @@ module.exports = {
     const deletePlant = await db.delete_plant(id);
     res.status(200).send(deletePlant);
   },
+
+  getPlant: async (req, res) => {
+    const db = req.app.get("db");
+    const { id } = req.session.user;
+    const { plant_id } = req.params;
+
+    const getPlant = await db.get_plant(id, plant_id);
+    res.status(200).send(getPlant);
+  },
 };

@@ -42,6 +42,7 @@ app.delete(`/api/folder/second/delete/:category_id`, scndCtrl.deleteFolder);
 app.get("/api/plants/:plant_category_id", plntCtrl.getPlants);
 app.post(`/api/plants/new/:plant_category_id`, plntCtrl.newPlant);
 app.delete(`/api/plants/delete/:id`, plntCtrl.deletePlant);
+app.get(`/api/plants/plant/:plant_id`, plntCtrl.getPlant);
 
 massive({
   connectionString: CONNECTION_STRING,
