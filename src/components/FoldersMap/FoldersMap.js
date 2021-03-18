@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { getFolder } from "../../ducks/folderReducer";
 
 const FoldersMap = (props) => {
   // console.log(props.category_id)
@@ -9,6 +10,8 @@ const FoldersMap = (props) => {
   // Pushes to specific folder page - "opens" that folder
   const getFolderOne = () => {
     props.history.push(`/InFolder/${props.category_id}`);
+    props.getFolder(props.category_id);
+    getFolder();
   };
   // Deletes single folder
   const deleteFolder = () => {
@@ -32,4 +35,4 @@ const FoldersMap = (props) => {
 
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps)(withRouter(FoldersMap));
+export default connect(mapStateToProps, { getFolder })(withRouter(FoldersMap));

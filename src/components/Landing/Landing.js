@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FoldersMap from "../FoldersMap/FoldersMap";
+import { getFolder } from "../../ducks/folderReducer";
 import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
@@ -42,6 +43,7 @@ const Landing = (props) => {
             category={e.category}
             category_id={e.category_id}
             setFolders={setFolders}
+            getFolder={getFolder}
           />
         );
       })}
@@ -51,4 +53,4 @@ const Landing = (props) => {
 
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps, { getFolder })(Landing);
