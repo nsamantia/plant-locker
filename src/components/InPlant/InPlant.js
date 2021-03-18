@@ -27,9 +27,9 @@ const InPlant = (props) => {
   return (
     <div>
       <p>InPLant.js</p>
-      {plant}
+      <p>{plant}</p>
       <img src={image} alt="plant" />
-      {comment}
+      <p>{comment}</p>
     </div>
   );
 };

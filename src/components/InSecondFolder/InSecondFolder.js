@@ -32,6 +32,10 @@ const InSecondFolder = (props) => {
       />
       <button onClick={() => getPlants()}>Search</button>
 
+      <Link to="/NewPlant">
+        <button>New Plant</button>
+      </Link>
+
       <div>
         {plants.map((e) => {
           return (

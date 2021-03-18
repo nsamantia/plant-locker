@@ -17,13 +17,9 @@ const Nav = (props) => {
   return (
     <div>
       <div>
-        <ul>
-          <Link to="/Landing">
-            <li>Plant Locker</li>
-          </Link>
-          {/* <Link><Li></Li></Link>
-                    <Link><Li></Li></Link> */}
-        </ul>
+        <Link to="/Landing">
+          <p>Plant Locker</p>
+        </Link>
       </div>
     </div>
   );
