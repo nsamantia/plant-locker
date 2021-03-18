@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import SecondFoldersMap from "../SecondFoldersMap/SecondFoldersMap";
 import PlantsMap from "../PlantsMap/PlantsMap";
+import { getFolder } from "../../ducks/folderReducer";
 
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -65,6 +66,7 @@ const InFolder = (props) => {
               category_id={e.category_id}
               category_image={e.category_image}
               setFolders={setFolders}
+              getFolder={getFolder}
             />
           );
         })}
@@ -88,4 +90,4 @@ const InFolder = (props) => {
 };
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps)(InFolder);
+export default connect(mapStateToProps, { getFolder })(InFolder);

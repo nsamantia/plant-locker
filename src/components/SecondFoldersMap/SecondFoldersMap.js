@@ -7,8 +7,7 @@ import { getFolder } from "../../ducks/folderReducer";
 const SecondFoldersMap = (props) => {
   const getFolderTwo = () => {
     props.history.push(`/InSecondFolder/${props.category_id}`);
-    // props.getFolder(props.category_id)
-    // getFolder()
+    props.getFolder(props.category_id);
   };
 
   const deleteFolder = () => {
