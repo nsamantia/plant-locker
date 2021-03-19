@@ -8,6 +8,7 @@ const authCtrl = require("./authController");
 const fldrCtrl = require("./folderController");
 const scndCtrl = require("./secondController");
 const plntCtrl = require("./plantController");
+const sndpCtrl = require("./secondPlantController");
 
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING } = process.env;
 
@@ -39,10 +40,16 @@ app.post(`/api/folder/second/new/:category_one_id`, scndCtrl.newFolder);
 app.delete(`/api/folder/second/delete/:category_id`, scndCtrl.deleteFolder);
 
 //plant endpoints
-app.get("/api/plants/:plant_category_id", plntCtrl.getPlants);
+app.get(`/api/plants/:plant_category_id`, plntCtrl.getPlants);
 app.post(`/api/plants/new/:plant_category_id`, plntCtrl.newPlant);
 app.delete(`/api/plants/delete/:id`, plntCtrl.deletePlant);
 app.get(`/api/plants/plant/:plant_id`, plntCtrl.getPlant);
+
+//second level plants endpoints
+app.get(`/api/plants/second/:plant_category_id`, sndpCtrl.getPlants);
+app.post(`/api/plants/second/new/:plant_category_id`, sndpCtrl.newSecondPlant);
+app.delete(`/api/plants/second/delete/:id`, sndpCtrl.deletePlant);
+app.get(`/api/plants/second/plant/:plant_id`, sndpCtrl.getPlant);
 
 massive({
   connectionString: CONNECTION_STRING,

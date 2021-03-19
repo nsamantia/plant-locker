@@ -16,14 +16,15 @@ plant_comment varchar(1000)
 )
 
 /*Second layer folders plants*/
-CREATE TABLE plants_pl(
+CREATE TABLE plants_second_pl(
 id SERIAL PRIMARY KEY,
 plant varchar(70) NOT NULL,
-plant_category_id int NOT NULL REFERENCES category_pl(category_id),
+plant_category_id int NOT NULL REFERENCES category_second_pl(category_id),
 user_id INT REFERENCES users_pl(id),
 plant_image text,
 plant_comment varchar(1000)
 )
+
 /* First layer folder*/
 CREATE TABLE category_pl(
 category_id SERIAL PRIMARY KEY,
