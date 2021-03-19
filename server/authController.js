@@ -1,4 +1,3 @@
-const { hashSync } = require("bcrypt");
 const bcrypt = require("bcryptjs");
 
 module.exports = {
