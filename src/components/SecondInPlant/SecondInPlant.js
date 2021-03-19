@@ -15,7 +15,7 @@ const InPlant = (props) => {
 
   const getPlant = () => {
     axios
-      .get(`/api/plants/plant/${props.match.params.id}`)
+      .get(`/api/plants/second/plant/${props.match.params.id}`)
       .then((res) => {
         setPlant(res.data[0].plant);
         setImage(res.data[0].plant_image);

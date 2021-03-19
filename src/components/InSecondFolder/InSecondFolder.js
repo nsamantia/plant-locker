@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import FoldersMap from "../FoldersMap/FoldersMap";
-import PlantsMap from "../PlantsMap/PlantsMap";
+import SecondPlantsMap from "../SecondPlantsMap/SecondPlantsMap";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -38,7 +38,7 @@ const InSecondFolder = (props) => {
       <div>
         {plants.map((e) => {
           return (
-            <PlantsMap
+            <SecondPlantsMap
               plants={e}
               plant_name={e.plant}
               plant_id={e.id}
