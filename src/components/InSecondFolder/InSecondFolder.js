@@ -18,7 +18,7 @@ const InSecondFolder = (props) => {
 
   const getPlants = () => {
     axios
-      .get(`/api/plants/${props.match.params.category_id}`)
+      .get(`/api/plants/second/${props.match.params.category_id}`)
       .then((res) => setPlants(res.data))
       .catch((err) => console.log(err));
   };
