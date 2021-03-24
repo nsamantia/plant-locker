@@ -12,10 +12,11 @@ const Landing = (props) => {
 
   useEffect(() => {
     getFolders();
-    return () => {
-      setFolders([]);
-    };
-  }, []);
+    console.log(folders);
+    // return () => {
+    //   setFolders([]);
+    // };
+  }, [folders.length]);
 
   const getFolders = () => {
     axios
