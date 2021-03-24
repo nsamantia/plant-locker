@@ -38,13 +38,15 @@ const Landing = (props) => {
 
       {folders.map((e) => {
         return (
-          <FoldersMap
-            folder={e}
-            category={e.category}
-            category_id={e.category_id}
-            setFolders={setFolders}
-            getFolder={getFolder}
-          />
+          <div key={e.category_id}>
+            <FoldersMap
+              folder={e}
+              category={e.category}
+              category_id={e.category_id}
+              setFolders={setFolders}
+              getFolder={getFolder}
+            />
+          </div>
         );
       })}
     </div>

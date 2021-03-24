@@ -60,14 +60,16 @@ const InFolder = (props) => {
       <div>
         {folders.map((e) => {
           return (
-            <SecondFoldersMap
-              folder={e}
-              category={e.category}
-              category_id={e.category_id}
-              category_image={e.category_image}
-              setFolders={setFolders}
-              getFolder={getFolder}
-            />
+            <div key={e.category_id}>
+              <SecondFoldersMap
+                folder={e}
+                category={e.category}
+                category_id={e.category_id}
+                category_image={e.category_image}
+                setFolders={setFolders}
+                getFolder={getFolder}
+              />
+            </div>
           );
         })}
       </div>
@@ -75,13 +77,15 @@ const InFolder = (props) => {
       <div>
         {plants.map((e) => {
           return (
-            <PlantsMap
-              plants={e}
-              plant_name={e.plant}
-              plant_id={e.id}
-              plant_image={e.plant_image}
-              setPlants={setPlants}
-            />
+            <div key={e.id}>
+              <PlantsMap
+                plants={e}
+                plant_name={e.plant}
+                plant_id={e.id}
+                plant_image={e.plant_image}
+                setPlants={setPlants}
+              />
+            </div>
           );
         })}
       </div>

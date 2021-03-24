@@ -38,12 +38,14 @@ const InSecondFolder = (props) => {
       <div>
         {plants.map((e) => {
           return (
-            <SecondPlantsMap
-              plants={e}
-              plant_name={e.plant}
-              plant_id={e.id}
-              setPlants={setPlants}
-            />
+            <div key={e.id}>
+              <SecondPlantsMap
+                plants={e}
+                plant_name={e.plant}
+                plant_id={e.id}
+                setPlants={setPlants}
+              />
+            </div>
           );
         })}
       </div>
