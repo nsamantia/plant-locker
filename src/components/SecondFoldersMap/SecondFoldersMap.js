@@ -12,7 +12,7 @@ const SecondFoldersMap = (props) => {
 
   const deleteFolder = () => {
     axios
-      .delete(`/api/second/folder/delete/${props.category_id}`)
+      .delete(`/api/folder/second/delete/${props.category_id}`)
       .then((res) => props.setFolders(res.data))
       .catch((err) => console.log(err));
   };
