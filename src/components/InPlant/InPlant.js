@@ -8,10 +8,7 @@ const InPlant = (props) => {
 
   useEffect(() => {
     getPlant();
-    return () => {
-      setPlant([]);
-    };
-  }, []);
+  }, [plant.length]);
 
   const getPlant = () => {
     axios

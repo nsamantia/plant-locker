@@ -14,17 +14,11 @@ const InFolder = (props) => {
 
   useEffect(() => {
     getFolders();
-    return () => {
-      setFolders([]);
-    };
-  }, []);
+  }, [folders.length]);
 
   useEffect(() => {
     getPlants(props.match.params.category_id);
-    return () => {
-      setPlants([]);
-    };
-  }, []);
+  }, [plants.length]);
 
   const getFolders = () => {
     axios
