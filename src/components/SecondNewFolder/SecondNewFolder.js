@@ -9,6 +9,8 @@ const SecondNewFolder = (props) => {
   const [categoryImage, setCategoryImage] = useState("");
   const [folder, setFolder] = useState(props.folder.folder);
 
+  console.log(folder);
+
   const newFolder = () => {
     axios.post(`/api/folder/second/new/${folder}`, { category });
     setCategory("");

@@ -4,6 +4,7 @@ import FoldersMap from "../FoldersMap/FoldersMap";
 import SecondPlantsMap from "../SecondPlantsMap/SecondPlantsMap";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { getFolder } from "../../ducks/folderReducer";
 
 const InSecondFolder = (props) => {
   const [plants, setPlants] = useState([]);
@@ -51,4 +52,4 @@ const InSecondFolder = (props) => {
 };
 const mapStateToProps = (reduxState) => reduxState;
 
-export default connect(mapStateToProps)(InSecondFolder);
+export default connect(mapStateToProps, { getFolder })(InSecondFolder);

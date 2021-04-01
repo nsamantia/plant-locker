@@ -23,7 +23,7 @@ const FoldersMap = (props) => {
   return (
     <div className="folder-map-container">
       <button className="folder-button" onClick={() => getFolderOne()}>
-        <p className="folder-p">folder</p>
+        <p className="folder-p">Folder</p>
         <p className="folder-category">{props.category}</p>
         <img src={props.category_image} alt="" />
       </button>

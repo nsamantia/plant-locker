@@ -20,6 +20,10 @@ const InFolder = (props) => {
     getPlants(props.match.params.category_id);
   }, [plants.length]);
 
+  useEffect(() => {
+    folderSet();
+  }, [props.getFolder.length]);
+
   const getFolders = () => {
     axios
       .get(
@@ -34,6 +38,11 @@ const InFolder = (props) => {
       .get(`/api/plants/${props.match.params.category_id}`)
       .then((res) => setPlants(res.data))
       .catch((err) => console.log(err));
+  };
+
+  const folderSet = () => {
+    props.getFolder(props.match.params.category_id);
+    console.log(props.match.params.category_id);
   };
 
   return (
