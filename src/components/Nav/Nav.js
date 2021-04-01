@@ -10,9 +10,12 @@ const Nav = (props) => {
     // Keeps users on session when page is refreshed
     axios.get(`/api/auth/getUser`).then((res) => {
       props.loginUser(res.data);
-      // Keeps folder id from clearing when page is refreshed
     });
   }, []);
+
+  useEffect(() => {
+    getFolder();
+  }, [props.getFolder.length]);
 
   return (
     <div>
