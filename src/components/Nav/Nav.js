@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginUser } from "../../ducks/reducer";
 import { getFolder } from "../../ducks/folderReducer";
+import "../../css/Nav.css";
 
 const Nav = (props) => {
   useEffect(() => {
@@ -18,9 +19,9 @@ const Nav = (props) => {
   }, [props.getFolder.length]);
 
   return (
-    <div>
+    <div class="nav-container">
       <div>
-        <Link to="/Landing">
+        <Link class="link" to="/Landing">
           <p>Plant Locker</p>
         </Link>
       </div>
