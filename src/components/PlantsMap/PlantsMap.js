@@ -3,7 +3,7 @@ import axios from "axios";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import "../../css/style.css";
+import "../../css/PlantsMap.css";
 
 const PlantsMap = (props) => {
   const deletePlant = () => {
@@ -18,10 +18,17 @@ const PlantsMap = (props) => {
 
   return (
     <div className="plant-map-container">
-      <button className="plant-button" onClick={() => openPLant()}>
-        <p>{props.plant_name}</p>
-        <img src={props.plant_image} alt="" />
+      <button class="plant-button" onClick={() => openPLant()}>
+        <div class="plant-text">
+          <img class="image" src={props.plant_image} alt="" />
+
+          <div class="text-total">
+            <p class="card-type">Plant</p>
+            <h2>{props.plant_name}</h2>
+          </div>
+        </div>
       </button>
+
       <button onClick={() => deletePlant()}>X</button>
     </div>
   );
