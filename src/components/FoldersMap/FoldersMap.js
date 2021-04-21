@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import { getFolder } from "../../ducks/folderReducer";
 
 const FoldersMap = (props) => {
-  // console.log(props.category_id)
+  console.log(props.category_id);
 
   // Pushes to specific folder page - "opens" that folder
   const getFolderOne = () => {
