@@ -3,6 +3,7 @@ import axios from "axios";
 import SecondFoldersMap from "../SecondFoldersMap/SecondFoldersMap";
 import PlantsMap from "../PlantsMap/PlantsMap";
 import { getFolder } from "../../ducks/folderReducer";
+import "../../css/InFolder.css";
 
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -48,16 +49,19 @@ const InFolder = (props) => {
   return (
     <div className="in-folder-container">
       <input
+        class="in-folder-search"
         type="text"
         name="search"
         onChange={(e) => setSearch(e.target.value)}
       />
-      <button onClick={() => getFolders()}>Search</button>
+      <button class="in-folder-button" onClick={() => getFolders()}>
+        Search
+      </button>
       <Link to="/SecondNewFolder">
-        <button>New Folder</button>
+        <button class="in-folder-button">New Folder</button>
       </Link>
       <Link to="/NewPlant">
-        <button>New Plant</button>
+        <button class="in-folder-button">New Plant</button>
       </Link>
 
       <div>
