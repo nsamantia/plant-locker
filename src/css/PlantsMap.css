@@ -26,16 +26,16 @@
 }
 
 .card-type {
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
   text-align: right;
   color: green;
   font-weight: bold;
   font-size: 12px;
 }
 
-.plant-text {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.plant-name {
+  padding-bottom: 1rem;
 }
 
 .image {
@@ -43,5 +43,5 @@
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
 }

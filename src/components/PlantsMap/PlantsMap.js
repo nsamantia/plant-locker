@@ -24,7 +24,7 @@ const PlantsMap = (props) => {
 
           <div class="text-total">
             <p class="card-type">Plant</p>
-            <h2>{props.plant_name}</h2>
+            <h2 class="plant-name">{props.plant_name}</h2>
           </div>
         </div>
       </button>
