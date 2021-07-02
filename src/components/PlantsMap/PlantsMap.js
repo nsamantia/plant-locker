@@ -29,7 +29,9 @@ const PlantsMap = (props) => {
         </div>
       </button>
 
-      <button onClick={() => deletePlant()}>X</button>
+      <button class="delete-button" onClick={() => deletePlant()}>
+        X
+      </button>
     </div>
   );
 };

@@ -8,7 +8,7 @@
 
 .plant-map-container {
   font-family: "Roboto", sans-serif;
-  margin-top: 0rem;
+  margin-top: 1rem;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -28,15 +28,16 @@
 
 .card-type {
   padding-top: 0.5rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   text-align: right;
   color: green;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .plant-name {
   padding-bottom: 1rem;
+  font-size: 20px;
 }
 
 .image {
@@ -45,4 +46,16 @@
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.delete-button {
+  font-family: "Roboto", sans-serif;
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: 3rem;
+  font-size: 16px;
+  outline: 0;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background: transparent;
 }

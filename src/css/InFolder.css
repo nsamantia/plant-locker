@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.in-folder-container {
+  margin: 2rem;
+}
+
 .in-folder-button {
   font-family: "Roboto", sans-serif;
   background-color: lightseagreen;
@@ -19,10 +23,8 @@
 
 .in-folder-search {
   font-size: 16px;
-
   outline: 0;
   border: 1px solid gray;
-
   border-radius: 15px;
   background: transparent;
   height: 32px;
