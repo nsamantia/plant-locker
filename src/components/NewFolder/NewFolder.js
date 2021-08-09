@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 
 const NewFolder = (props) => {
   const [category, setCategory] = useState("");
+  const [categoryImage, setCategoryImage] = useState("");
 
   const uploadFolder = () => {
-    axios.post("/api/folder/new", { category });
+    axios.post("/api/folder/new", { category, categoryImage });
     setCategory("");
+    setCategoryImage("");
     props.history.goBack();
   };
 
@@ -17,13 +19,26 @@ const NewFolder = (props) => {
       <div>
         <p>New Folder</p>
       </div>
-      <input
-        type="text"
-        name="category"
-        onChange={(e) => setCategory(e.target.value)}
-      />
+      <label>
+        Folder Name:
+        <input
+          type="text"
+          name="category"
+          onChange={(e) => setCategory(e.target.value)}
+        />
+      </label>
+
+      <label>
+        Image Link:
+        <input
+          type="text"
+          name="image"
+          onChange={(e) => setCategoryImage(e.target.value)}
+        />
+      </label>
 
       <button onClick={() => uploadFolder()}>Upload New Folder</button>
+      <img src={categoryImage} alt="" />
     </div>
   );
 };

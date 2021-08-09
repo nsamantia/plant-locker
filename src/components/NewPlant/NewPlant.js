@@ -33,7 +33,7 @@ const NewPlant = (props) => {
           <input type="text" onChange={(e) => setPlantImage(e.target.value)} />
         </label>
         <label>
-          Plant name:
+          Plant Name:
           <input type="text" onChange={(e) => setPlant(e.target.value)} />
         </label>
         <label>

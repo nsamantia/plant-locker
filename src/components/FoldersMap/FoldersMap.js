@@ -26,7 +26,7 @@ const FoldersMap = (props) => {
       <button className="folder-button" onClick={() => getFolderOne()}>
         <p className="folder-card-type">Folder</p>
         <p className="folder-category">{props.category}</p>
-        <img classname="folder-image" src={props.category_image} alt="" />
+        <img classname="folder-image" src={props.categoryImage} alt="" />
       </button>
       <button className="folder-delete-button" onClick={() => deleteFolder()}>
         X
