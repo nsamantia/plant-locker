@@ -41,6 +41,7 @@ const Landing = (props) => {
               folder={e}
               category={e.category}
               category_id={e.category_id}
+              category_image={e.category_image}
               setFolders={setFolders}
               getFolder={getFolder}
             />
