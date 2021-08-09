@@ -19,14 +19,9 @@ const PlantsMap = (props) => {
   return (
     <div className="plant-map-container">
       <button class="plant-button" onClick={() => openPLant()}>
-        <div class="plant-text">
-          <img class="image" src={props.plant_image} alt="" />
-
-          <div class="text-total">
-            <p class="card-type">Plant</p>
-            <h2 class="plant-name">{props.plant_name}</h2>
-          </div>
-        </div>
+        <img class="image" src={props.plant_image} alt="" />
+        <p class="card-type">Plant</p>
+        <p class="plant-name">{props.plant_name}</p>
       </button>
 
       <button class="delete-button" onClick={() => deletePlant()}>
