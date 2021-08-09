@@ -3,6 +3,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { getFolder } from "../../ducks/folderReducer";
+import "../../css/FoldersMap.css";
 
 const FoldersMap = (props) => {
   console.log(props.category_id);
@@ -23,11 +24,13 @@ const FoldersMap = (props) => {
   return (
     <div className="folder-map-container">
       <button className="folder-button" onClick={() => getFolderOne()}>
-        <p className="folder-p">Folder</p>
+        <p className="folder-card-type">Folder</p>
         <p className="folder-category">{props.category}</p>
-        <img src={props.category_image} alt="" />
+        <img classname="folder-image" src={props.category_image} alt="" />
       </button>
-      <button onClick={() => deleteFolder()}>X</button>
+      <button className="folder-delete-button" onClick={() => deleteFolder()}>
+        X
+      </button>
     </div>
   );
 };
